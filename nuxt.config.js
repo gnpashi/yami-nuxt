@@ -80,8 +80,8 @@ firebase:
           subscribeManually: false
         },
         ssr: false, // default
-        emulatorPort: 4444,
-        emulatorHost: 'http://localhost',
+        // emulatorPort: 4444,
+        // emulatorHost: 'http://localhost',
       }
     }
   
