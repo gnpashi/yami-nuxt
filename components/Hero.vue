@@ -4,10 +4,10 @@
         <div class="hero">
             <div class="hero-body is-flexis-justify-content-centeris-align-items-centerflex-dire">
                 <div class="hero-text ">
-                    <h1 class='title is-1 my-6'> 
+                    <h1 class='title is-1 my-3'> 
                         יאמי!
                     </h1>
-                    <p class="content is-large">
+                    <p class="subtitle is-3">
                         אוכל מושלם
                         לחבר המושלם
                     </p>
@@ -16,7 +16,7 @@
                     </button>
                 </div>
                 <div class="hero-img my-6">
-                    <img src="hero-img.png" alt="">
+                    <img src="hero-img.png" class="" alt="">
                 </div>
                 
             </div>
@@ -34,7 +34,9 @@
 <style>
     .hero-body{
         gap: 5rem;
-        height: 100vh;
+    }
+    .subtitle{
+        white-space: pre-line;
     }
 </style>
 

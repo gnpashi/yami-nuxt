@@ -21,13 +21,16 @@
             
             </div>
 
+            <a href="#clients" class="navbar-item">
+                לקוחות מספרים
+            </a>
             <div class="navbar-end">
                 <a class="navbar-item">
                 מוצרים
             </a>
 
             <a class="navbar-item">
-                לקוחות מספרים
+                להזמנה
             </a>
             </div>
         </div>
