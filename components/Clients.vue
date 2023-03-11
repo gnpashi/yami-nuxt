@@ -26,7 +26,9 @@ import Vue from 'vue'
 export default Vue.extend({
     name: 'Clients',
 
-
+    created() {
+        console.log('Clients created')
+    },
 })
 </script>
 <style scoped>

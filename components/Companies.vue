@@ -1,5 +1,5 @@
 <template>
-    <div class="companies">
+    <div class="companies" id="companies">
         <div class=" is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
             <div class="img" v-for="(image, index) in images" :key="index">
                 <img :src="image.path" style="width:150px" :class="{ hover: image.isActive }" @mouseenter="image.isActive = true" @mouseleave="image.isActive = false" alt="">

@@ -5,7 +5,8 @@
     <div class="navbar-brand">
         <a class="navbar-item">
             <h1 class="title">
-                יאמי!
+                <NuxtLink to="/" class="has-text-white">יאמי!</NuxtLink>
+                
             </h1>
         </a>
 
@@ -20,18 +21,11 @@
             <div class="navbar-start">
             
             </div>
-
-            <a href="#clients" class="navbar-item">
-                לקוחות מספרים
-            </a>
+            
             <div class="navbar-end">
-                <a class="navbar-item">
-                מוצרים
-            </a>
-
-            <a class="navbar-item">
-                להזמנה
-            </a>
+                <NuxtLink to="/#clients" class="navbar-item">לקוחות מספרים</NuxtLink>
+                <NuxtLink to="/#companies" class="navbar-item">מוצרים</NuxtLink>
+                <NuxtLink to="/store" class="navbar-item">להזמנה</NuxtLink>
             </div>
         </div>
     </nav>
@@ -45,6 +39,11 @@
             isOpen: false,
             };
         },
+        watch: {
+        '$route'() {
+            this.isOpen = false;
+        },
+  },
 
     }
 </script>

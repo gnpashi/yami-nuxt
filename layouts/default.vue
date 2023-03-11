@@ -1,5 +1,6 @@
 <template>
     <div>
+      <Navbar />
       <Nuxt />
     </div>
 </template>
@@ -27,5 +28,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
+  html{
+    scroll-behavior: smooth;
+  }
 </style>

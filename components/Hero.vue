@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar />
         <div class="hero">
             <div class="hero-body is-flexis-justify-content-centeris-align-items-centerflex-dire">
                 <div class="hero-text ">
