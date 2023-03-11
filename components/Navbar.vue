@@ -16,7 +16,7 @@
         </a>
     </div>
 
-        <div :class="{ 'open': isOpen }" id="navbar" class="navbar-menu">
+        <div :class="{ 'open': isOpen }" id="navbar" class="navbar-menu has-background-link-dark">
             <div class="navbar-start">
             
             </div>
