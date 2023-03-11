@@ -9,6 +9,7 @@
     name: 'IndexPage',
     head() {
       return {
+        title: "יאמי!",
         htmlAttrs: {
       lang: 'he',
       dir: 'rtl'

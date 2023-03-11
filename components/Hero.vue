@@ -2,9 +2,9 @@
     <div>
         <Navbar />
         <div class="hero">
-            <div class="hero-body is-flex is-justify-content-center is-align-items-center ">
+            <div class="hero-body is-flexis-justify-content-centeris-align-items-centerflex-dire">
                 <div class="hero-text ">
-                    <h1 class='title is-1'> 
+                    <h1 class='title is-1 my-6'> 
                         יאמי!
                     </h1>
                     <p class="content is-large">
@@ -15,7 +15,7 @@
                        להזמנה
                     </button>
                 </div>
-                <div class="hero-img">
+                <div class="hero-img my-6">
                     <img src="hero-img.png" alt="">
                 </div>
                 

@@ -5,7 +5,7 @@
     <div class="navbar-brand">
         <a class="navbar-item">
             <h1 class="title">
-                יאמי
+                יאמי!
             </h1>
         </a>
 
