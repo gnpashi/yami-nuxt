@@ -3,12 +3,10 @@
 <template>
     <nav class="navbar has-background-link-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item">
-            <h1 class="title">
+            <h1 class="title is-flex is-align-items-center is-justify-content-center">
                 <NuxtLink to="/" class="has-text-white">יאמי!</NuxtLink>
                 
             </h1>
-        </a>
 
         <a  @click="isOpen = !isOpen" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -61,5 +59,9 @@
     .navbar-item .title,
     .navbar-item{
         color: white;
+    }
+
+    .title{
+        margin-bottom: 0!important;
     }
 </style>
