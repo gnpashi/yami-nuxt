@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <Clients />
+    <Companies />
   </div>
 </template>
 
