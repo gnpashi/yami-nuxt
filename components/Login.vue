@@ -1,7 +1,17 @@
 <template>
     <div>
       <h2>Login</h2>
-      <button @click="loginWithPopup">Login with Popup</button>
+      <form @submit.prevent="login">
+        <div>
+          <label>Email:</label>
+          <input type="email" v-model="email" required />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" v-model="password" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
       <p v-if="error">{{ error }}</p>
     </div>
   </template>
@@ -10,15 +20,16 @@
   export default {
     data() {
       return {
-        error: null
+        email: '',
+        password: '',
+        error: ''
       }
     },
     methods: {
-      async loginWithPopup() {
-        console.log("loginWithPopup");
+      async login() {
         try {
-          const provider = new this.$fireModule.auth.EmailAuthProvider()
-          const userCredential = await this.$fire.auth.signInWithPopup(provider)
+          const userCredential = await this.$fire.auth.signInWithEmailAndPassword(this.email, this.password)
+          // User successfully logged in
           console.log(userCredential.user)
         } catch (error) {
           this.error = error.message

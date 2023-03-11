@@ -78,7 +78,10 @@ firebase:
           onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
           onAuthStateChangedAction: 'onAuthStateChangedAction',
           subscribeManually: false
-        }
+        },
+        ssr: false, // default
+        emulatorPort: 4444,
+        emulatorHost: 'http://localhost',
       }
     }
   
