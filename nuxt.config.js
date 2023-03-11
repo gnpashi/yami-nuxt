@@ -39,6 +39,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
+     
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -56,5 +58,29 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+firebase: 
+  {
+    config: {
+      apiKey: "AIzaSyByQj1iAfN2cFflC2wKjUiikkIXQ90ACyA",
+      authDomain: "yami-54628.firebaseapp.com",
+      projectId: "yami-54628",
+      storageBucket: "yami-54628.appspot.com",
+      messagingSenderId: "879039150307",
+      appId: "1:879039150307:web:65dc7795222b00621dadd6",
+      measurementId: "G-B97WC75SDX"
+    },
+    services: {
+      auth: {
+        persistence: 'local', // default
+        initialize: {
+          onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          subscribeManually: false
+        }
+      }
+    }
+  
+}
 }
