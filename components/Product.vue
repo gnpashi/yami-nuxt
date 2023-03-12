@@ -3,7 +3,7 @@
         <div class="card-content">
             <div class="content">
             <p>
-                <img :src="product.img_url" alt="">
+                <img :src="product.img_url" loading="lazy" alt="">
             </p>
             <h1 class="title">{{ product.name }}</h1>
             <p>{{ product.description }}</p>
