@@ -13,7 +13,10 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'יאמי!' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {name: "og:title", content: "יאמי!", hid: "og:title"},
+      {name: "og:description", content: "אוכל מושלם לחבר המושלם", hid: "og:description"},
+      {name: "og:url", content: "https://yamiyami.netlify.app/", hid: "og:url"},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -35,7 +38,8 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"',
         rel: 'stylesheet'
       }
-    ]
+    ],
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
