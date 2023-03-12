@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// import 'firebaseui'
 import Login from '~/components/Login.vue'
 export default {
     name: 'LoginPage',

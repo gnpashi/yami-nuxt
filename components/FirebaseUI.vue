@@ -20,6 +20,7 @@
       }
     },
     mounted() {
+    console.log("mounted")
       const uiConfig = {
         signInSuccessUrl: '/',
         signInOptions: [
@@ -28,7 +29,7 @@
         // Other config options for FirebaseUI
       }
   
-    //   const ui = new firebaseui.auth.AuthUI(firebase.auth())
+      const ui = new firebaseui.auth.AuthUI(firebase.auth())
   
       ui.start(this.$refs.firebaseui, uiConfig)
   
