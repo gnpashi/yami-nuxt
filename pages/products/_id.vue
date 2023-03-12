@@ -1,17 +1,20 @@
 <template>
-  <Product :products="products" :product="product" :currentUser="currentUser" @productDeleted="fetchProducts" />
+  <div>
+    <Product :products="products" :product="product" :currentUser="currentUser" @productDeleted="fetchProducts" />
+  </div>
 </template>
 
 <script>
  export default {
-  name: 'StoreIndexPage',
+  name: 'ProductPage',
   layout: 'default',
   data() {
     return {
       currentUser: {
         email: 'אין משתמש פעיל'
       },
-      products: []
+      products: [],
+      id: this.$route.params.id
     }
   },
   // editProduct(){
@@ -46,20 +49,21 @@
   },
   async asyncData({ params, $fire }) {
     try {
-      const productId = params.id
-      const productRef = $fire.firestore.collection('products').doc(productId)
-      const doc = await productRef.get()
-      if (!doc.exists) {
-        return { product: null }
-      } else {
-        return { product: doc.data() }
-      }
-    } catch (error) {
-      console.error('Error getting product:', error)
-      return { product: null }
+    const productId = params.id
+    const productRef = $fire.firestore.collection('products').doc(productId)
+    const doc = await productRef.get()
+    if (!doc.exists) {
+    return { product: null }
+    } else {
+    const productData = doc.data()
+    productData.id = doc.id
+    return { product: productData }
     }
-  }
-
+    } catch (error) {
+    console.error('Error getting product:', error)
+    return { product: null }
+    }
+}
   
 }
 

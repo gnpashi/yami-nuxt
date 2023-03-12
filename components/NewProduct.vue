@@ -95,7 +95,7 @@
           const docRef = await this.$fire.firestore.collection('products').add(product)
           console.log('Product created with ID:', docRef.id)
           this.$emit('productCreated')
-          this.$router.push('/store')
+          this.$router.push('/products')
           this.name = ''
             this.description = ''
             this.price = ''

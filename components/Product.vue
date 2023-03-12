@@ -3,10 +3,11 @@
         <div class="card-content">
             <div class="content">
             <p>
-                <img :src="product.img_url" loading="lazy" alt="">
+                <img :src="product.img_url" loading="lazy" :class="{productPage: $route.path == `/Products/${product.id}`}" alt="">
             </p>
-            <h1 class="title">{{ product.name }}</h1>
-            <NuxtLink :to="`/store/${product.id}`">{{ product.name }}</NuxtLink>
+            <NuxtLink :to="`/Products/${product.id}`">
+              <h1 class="title">{{ product.name }}</h1>
+            </NuxtLink>
 
 
             <p>{{ product.description }}</p>
@@ -18,9 +19,9 @@
                 <a :href="product.url" target="_blank">לאתר המוצר</a>
             </p>
             <div v-if="currentUser.email == 'guynatan@gmail.com' || currentUser.email == 'gilnatan5@gmail.com'" >
-                <!-- <button @click="editProduct" class="button is-success">
+                <button @click="editProduct" class="button is-success">
                 edit
-                </button> -->
+                </button>
                 <button @click="deleteProduct(product.id)" class="button is-danger">Delete</button>
 
             </div>
@@ -32,22 +33,25 @@
 
 <script>
 export default {
-    name: 'Product',
-    props: {
-        product: {
-            type: Object,
+  name: 'Product',
+  props: {
+    product: {
+      type: Object,
+      required: true
+    },
+    currentUser: {
+      type: Object,
+      required: true
+    },
+    products: {
+      type: Array,
             required: true
-        },
-        currentUser: {
-            type: Object,
-            required: true
-        },
-        products: {
-            type: Array,
-            required: true}
+          },
+      
     },
     methods: {
-    editProduct(){
+      editProduct(){
+      console.log(this.$route.path);
       console.log('editProduct');
       this.name = "name"
     },
@@ -68,10 +72,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-img{
-  max-width: 30%;
-}
-
+  img.productPage{
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1024px) {
+    img.productPage{
+    max-width: 30%;
+  }
+    }
+    
 </style>

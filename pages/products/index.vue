@@ -23,7 +23,7 @@
   <script>
   
   export default {
-  name: 'StoreIndexPage',
+  name: 'ProductsIndexPage',
   layout: 'default',
   data() {
     return {

@@ -10,7 +10,7 @@
                         אוכל מושלם
                         לחבר המושלם
                     </p>
-                    <NuxtLink to="/store" class="button is-link is-large">למוצרים</NuxtLink>
+                    <NuxtLink to="/products" class="button is-link is-large">למוצרים</NuxtLink>
                 </div>
                 <div class="hero-img my-6">
                     <nuxt-img format="webp" src="/hero-img.png"  />
