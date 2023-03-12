@@ -3,7 +3,7 @@
         <div class="card-content">
             <div class="content">
             <p>
-                <img :src="product.img_url" loading="lazy" alt="">
+              <nuxt-img format="webp" :src="product.img_url" alt="" />
             </p>
             <h1 class="title">{{ product.name }}</h1>
             <p>{{ product.description }}</p>

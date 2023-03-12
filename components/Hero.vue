@@ -13,7 +13,7 @@
                     <NuxtLink to="/store" class="button is-link is-large">להזמנה</NuxtLink>
                 </div>
                 <div class="hero-img my-6">
-                    <nuxt-img format="webp" src="/hero-img.png" loading="lazy" />
+                    <nuxt-img format="webp" src="/hero-img.png"  />
                 </div>
                 
             </div>

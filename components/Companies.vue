@@ -2,7 +2,7 @@
     <div class="companies" id="companies">
         <div class=" is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center">
             <div class="img" v-for="(image, index) in images" :key="index">
-                <img :src="image.path" loading="lazy" style="width:150px" :class="{ hover: image.isActive }" @mouseenter="image.isActive = true" @mouseleave="image.isActive = false" alt="">
+                <nuxt-img format="webp" :src="image.path" style="width:150px" :class="{ hover: image.isActive }" @mouseenter="image.isActive = true" @mouseleave="image.isActive = false" />
             </div>
         </div>
     </div>
@@ -16,10 +16,10 @@
     return {
         isActive: false,
         images: [
-            {path: "https://www.cotecnica.es/sites/default/files/logo-cotecnica.png", isActive: false},
-            {path: "https://images.logicommerce.cloud/106/main-logo-es.svg", isActive: false},
-            {path: "https://www.farmina.com/images/linee/brand-head/_10_nd-ocean@web.png", isActive: false},
-            {path: "https://www.farmina.com/images/linee/brand-head/cibau.png", isActive: false},
+            {path: "logo1.png", isActive: false},
+            {path: "logo2.svg", isActive: false},
+            {path: "logo3.png", isActive: false},
+            {path: "logo4.png", isActive: false},
 
         ],
 

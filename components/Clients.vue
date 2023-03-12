@@ -8,7 +8,8 @@
                 <cite class="my-2">ענבר כץ</cite>
             </div>
             <div class="client-img">
-                <img class="p-2" loading="lazy" src="https://www.farmina.com/fotoprodotti/cibau-puppy-maxi@web.png" alt="">
+                <nuxt-img format="webp" class="p-2" :src="images.client1.path"  />
+
             </div> 
         </div>
         <div class="client-second has-background-link-dark has-text-white p-2 py-4 subtitle is-4">
@@ -20,7 +21,8 @@
                 <cite class="my-2">דניאלה סולווי</cite>
             </div> 
             <div class="client-img">
-                <img class="p-2" loading="lazy" src="https://www.farmina.com/fotoprodotti/159_23_matisse-neutered-salmon@web.png" alt="">
+                <nuxt-img format="webp" class="p-2" :src="images.client2.path"  />
+
             </div> 
         </div>
     </div>
@@ -34,6 +36,14 @@ export default Vue.extend({
     created() {
         console.log('Clients created')
     },
+    data() {
+        return {
+            images: {
+                client1: { path: "client1.png" },
+                client2: { path: "client2.png" },
+            }
+    }
+    }
 })
 </script>
 <style scoped>

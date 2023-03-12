@@ -108,5 +108,8 @@ firebase:
     },
     ssr: false
   
+},
+image: {
+  domains: ['*']
 }
 }
