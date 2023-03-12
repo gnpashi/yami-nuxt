@@ -17,7 +17,7 @@ export default {
       {name: "og:title", content: "יאמי!", hid: "og:title"},
       {name: "og:description", content: "אוכל מושלם לחבר המושלם", hid: "og:description"},
       {name: "og:url", content: "https://yamiyami.netlify.app/", hid: "og:url"},
-      {name: "og:image", content: "/android-chrome-512x512.png", hid: "og:image"},
+      {name: "og:image", content: "/1200x630.png", hid: "og:image"},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
