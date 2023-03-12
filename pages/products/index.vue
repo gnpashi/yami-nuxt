@@ -9,20 +9,19 @@
           </div>
         </div>
       </div>
-
+      <label for="search">חיפוש</label>
+      <input class="input mb-3" type="text" @input="search" name="search">
       <div class="columns is-multiline">
-        <div class="column is-4" v-for="product in products" :key="product.id">
+        <div class="column is-4" v-for="product in filteredProducts" :key="product.id">
           <Product :products="products" :product="product" :currentUser="currentUser" @productDeleted="fetchProducts"/>
         </div>
       </div>
     </div>
   </div>
 </template>
-  
-  
-  <script>
-  
-  export default {
+
+<script>
+export default {
   name: 'ProductsIndexPage',
   layout: 'default',
   data() {
@@ -30,13 +29,10 @@
       currentUser: {
         email: 'אין משתמש פעיל'
       },
-      products: []
+      products: [],
+      filteredProducts: [] // Define filteredProducts property
     }
   },
-  // editProduct(){
-  //   console.log('editProduct');
-    
-  // },
   created() {
     this.fetchProducts()
   },
@@ -46,10 +42,23 @@
         const snapshot = await this.$fire.firestore.collection('products').get()
         const products = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
         this.products = products
+        this.filteredProducts = products // Update filteredProducts when products change
       } catch (error) {
         console.error('Error fetching products:', error)
       }
     },
+    search(event){
+  const searchTerm = event.target.value.toLowerCase()
+  this.filteredProducts = this.products.filter(product => 
+    (product.name && product.name.toLowerCase().includes(searchTerm)) ||
+    (product.description && product.description.toLowerCase().includes(searchTerm)) ||
+    (product.age && product.age.toLowerCase().includes(searchTerm)) ||
+    (product.price && product.price.toLowerCase().includes(searchTerm)) ||
+    (product.brand && product.brand.toLowerCase().includes(searchTerm)) ||
+    (product.allergies && product.allergies.toLowerCase().includes(searchTerm))
+  )
+}
+
   },
   mounted() {
     this.$fire.auth.onAuthStateChanged(user => {
@@ -67,13 +76,7 @@
     const productsRef = $fire.firestore.collection('products')
     const snapshot = await productsRef.get()
     const products = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-    console.log(products);
     return { products }
-  },
-
-  
+  }
 }
-
-    
-  </script>
-  
+</script>
