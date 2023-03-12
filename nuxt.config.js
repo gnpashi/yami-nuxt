@@ -72,17 +72,7 @@ firebase:
       measurementId: "G-B97WC75SDX"
     },
     services: {
-      auth: {
-        persistence: 'local', // default
-        initialize: {
-          onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
-          onAuthStateChangedAction: 'onAuthStateChangedAction',
-          subscribeManually: false
-        },
-        ssr: false, // default
-        // emulatorPort: 4444,
-        // emulatorHost: 'http://localhost',
-      }
+      auth: true,
     }
   
 }

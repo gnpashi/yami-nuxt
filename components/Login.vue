@@ -1,18 +1,20 @@
 <template>
     <div>
-      <h2>Login</h2>
-      <form @submit.prevent="login">
+      <h2>Sign In</h2>
+      <form @submit.prevent="signIn">
         <div>
-          <label>Email:</label>
-          <input type="email" v-model="email" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" v-model="email" required>
         </div>
         <div>
-          <label>Password:</label>
-          <input type="password" v-model="password" required />
+          <label for="password">Password</label>
+          <input type="password" id="password" v-model="password" required>
         </div>
-        <button type="submit">Login</button>
+        <div v-if="error">
+          {{ error }}
+        </div>
+        <button type="submit">Sign In</button>
       </form>
-      <p v-if="error">{{ error }}</p>
     </div>
   </template>
   
@@ -22,16 +24,19 @@
       return {
         email: '',
         password: '',
-        error: ''
+        error: null
       }
     },
     methods: {
-      async login() {
+      async signIn() {
         try {
-          const userCredential = await this.$fire.auth.signInWithEmailAndPassword(this.email, this.password)
-          // User successfully logged in
-          console.log(userCredential.user)
+          const auth = this.$fire.auth
+          await auth.signInWithEmailAndPassword(this.email, this.password)
+          // Signed in successfully
+          this.$store.commit('ON_AUTH_STATE_CHANGED_MUTATION', auth.currentUser)
+          this.$router.push('/dashboard')
         } catch (error) {
+          // Handle sign-in errors
           this.error = error.message
         }
       }
