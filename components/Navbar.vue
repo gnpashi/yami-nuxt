@@ -20,8 +20,8 @@
             
             <div class="navbar-end ">
                 <NuxtLink to="/#clients" class="navbar-item">לקוחות מספרים</NuxtLink>
-                <NuxtLink to="/#companies" class="navbar-item">מוצרים</NuxtLink>
-                <NuxtLink to="/store" class="navbar-item">להזמנה</NuxtLink>
+                <NuxtLink to="/#companies" class="navbar-item">חברות</NuxtLink>
+                <NuxtLink to="/store" class="navbar-item">למוצרים</NuxtLink>
             </div>
         </div>
     </nav>

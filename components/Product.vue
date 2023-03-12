@@ -3,13 +3,17 @@
         <div class="card-content">
             <div class="content">
             <p>
-              <nuxt-img format="webp" :src="product.img_url" alt="" />
+                <img :src="product.img_url" loading="lazy" alt="">
             </p>
             <h1 class="title">{{ product.name }}</h1>
             <p>{{ product.description }}</p>
             <p>{{ product.brand }}</p>
             <p><strong>גיל:</strong> {{ product.age }}</p>
+            <p><strong>רגישויות:</strong> {{ product.allergies}}</p>
             <p>{{ product.price }} ₪</p>
+            <p>
+                <a :href="product.url" target="_blank">לאתר המוצר</a>
+            </p>
             <div v-if="currentUser.email == 'guynatan@gmail.com' || currentUser.email == 'gilnatan5@gmail.com'" >
                 <!-- <button @click="editProduct" class="button is-success">
                 edit

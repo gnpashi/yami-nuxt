@@ -7,39 +7,51 @@
       <h2 class="title is-2">מוצר חדש</h2>
       <form @submit.prevent="onSubmit" class="box">
         <div class="field">
-          <label class="label" for="name">שם המוצר:</label>
+          <label class="label" for="name">שם המוצר</label>
           <div class="control">
             <input class="input" type="text" id="name" v-model="name">
           </div>
         </div>
         <div class="field">
-          <label class="label" for="description">תיאור:</label>
+          <label class="label" for="description">תיאור</label>
           <div class="control">
             <textarea class="textarea" id="description" v-model="description"></textarea>
           </div>
         </div>
         <div class="field">
-          <label class="label" for="price">מחיר:</label>
+          <label class="label" for="price">מחיר</label>
           <div class="control">
             <input class="input" type="number" id="price" v-model="price">
           </div>
         </div>
         <div class="field">
-          <label class="label" for="age">גיל:</label>
+          <label class="label" for="age">גיל</label>
           <div class="control">
             <input class="input" type="text" id="age" v-model="age">
           </div>
         </div>
         <div class="field">
-          <label class="label" for="brand">מותג:</label>
+          <label class="label" for="brand">מותג</label>
           <div class="control">
             <input class="input" type="text" id="brand" v-model="brand">
           </div>
         </div>
         <div class="field">
-          <label class="label" for="img_url">קישור לתמונה:</label>
+          <label class="label" for="allergies">רגישויות</label>
+          <div class="control">
+            <input class="input" type="text" id="allergies" v-model="allergies">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="img_url">קישור לתמונה</label>
           <div class="control">
             <input class="input" type="text" id="img_url" v-model="img_url">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="url">קישור לאתר</label>
+          <div class="control">
+            <input class="input" type="text" id="url" v-model="url">
           </div>
         </div>
         <div class="field">
@@ -60,6 +72,8 @@
         age:'',
         brand:'',
         img_url:'',
+        url:'',
+        allergies:'',
         created: false
       }
     },
@@ -73,6 +87,8 @@
             age: this.age,
             brand: this.brand,
             img_url: this.img_url,
+            url: this.url,
+            allergies: this.allergies,
             createdAt: new Date(),
             updatedAt: new Date(),
           }
@@ -86,6 +102,8 @@
             this.age = ''
             this.brand = ''
             this.img_url = ''
+            this.url = ''
+            this.allergies = ''
             this.created = true
 
           
