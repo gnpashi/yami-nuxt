@@ -16,14 +16,10 @@
     return {
         isActive: false,
         images: [
-            {path: "companies/download1.jpeg", isActive: false},
-            {path: "companies/download2.jpeg", isActive: false},
-            {path: "companies/download3.jpeg", isActive: false},
-            {path: "companies/download4.jpeg", isActive: false},
-            {path: "companies/download5.jpeg", isActive: false},
-            {path: "companies/download6.jpeg", isActive: false},
-            {path: "companies/download7.jpeg", isActive: false},
-            {path: "companies/download8.jpeg", isActive: false},
+            {path: "https://www.cotecnica.es/sites/default/files/logo-cotecnica.png", isActive: false},
+            {path: "https://images.logicommerce.cloud/106/main-logo-es.svg", isActive: false},
+            {path: "https://www.farmina.com/images/linee/brand-head/_10_nd-ocean@web.png", isActive: false},
+            {path: "https://www.farmina.com/images/linee/brand-head/cibau.png", isActive: false},
 
         ],
 
