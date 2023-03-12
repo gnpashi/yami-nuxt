@@ -1,7 +1,7 @@
 <template>
     <div class="clients content" id="clients">
         <div class="client-first has-background-pink has-text-white p-2 py-4">
-            <div class="client-text">
+            <div class="client-text subtitle is-4 has-text-white">
                 <p>
                     גיל אדם ישר מאוד ומקסים , מחירים הכי טובים של אוכל סופר פרימיום מצויין  ביחס לחנויות אחרות ,אני מזמינה ובאותו יום האוכל אצלי תמיד עם צ'ופר נחמד לכלבים. ממליצה בחום רב מאוד  להזמין ממנו גם מקבלים מוצר מעולה גם יחס מעולה גם שירות מעולה וגם מחיר מעולה .
                    </p>
@@ -11,7 +11,7 @@
                 <img class="p-2" src="https://www.farmina.com/fotoprodotti/cibau-puppy-maxi@web.png" alt="">
             </div> 
         </div>
-        <div class="client-second has-background-link-dark has-text-white p-2 py-4">
+        <div class="client-second has-background-link-dark has-text-white p-2 py-4 subtitle is-4">
             <div class="client-text">
                 <p>
                     אני מאד מאד מאד מרוצה מהשירות של גיל.
