@@ -1,8 +1,8 @@
 <template>
   <div>
     <Hero />
-    <Clients />
     <Companies />
+    <Clients />
   </div>
 </template>
 
