@@ -6,6 +6,9 @@
                 <img :src="product.img_url" loading="lazy" alt="">
             </p>
             <h1 class="title">{{ product.name }}</h1>
+            <NuxtLink :to="`/store/${product.id}`">{{ product.name }}</NuxtLink>
+
+
             <p>{{ product.description }}</p>
             <p>{{ product.brand }}</p>
             <p><strong>גיל:</strong> {{ product.age }}</p>
@@ -66,5 +69,9 @@ export default {
 </script>
 
 <style>
+
+img{
+  max-width: 30%;
+}
 
 </style>
