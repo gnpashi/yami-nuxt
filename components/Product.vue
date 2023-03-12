@@ -5,11 +5,11 @@
             <p>
                 <img :src="product.img_url" alt="">
             </p>
-            <p><strong>שם:</strong> {{ product.name }}</p>
-            <p><strong>מותג:</strong> {{ product.brand }}</p>
+            <h1 class="title">{{ product.name }}</h1>
+            <p>{{ product.description }}</p>
+            <p>{{ product.brand }}</p>
             <p><strong>גיל:</strong> {{ product.age }}</p>
-            <p><strong>מחיר:</strong> {{ product.price }}</p>
-            <p><strong>תיאור:</strong> {{ product.description }}</p>
+            <p>{{ product.price }} ₪</p>
             <div v-if="currentUser.email == 'guynatan@gmail.com' || currentUser.email == 'gilnatan5@gmail.com'" >
                 <!-- <button @click="editProduct" class="button is-success">
                 edit

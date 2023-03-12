@@ -41,4 +41,22 @@ export default Vue.extend({
         background-color:hsla(284, 59%, 64%, 1)
 ;
     }
+    @media screen and (min-width: 768px) {
+        .client-first, .client-second{
+            padding-inline: 10rem!important;
+            display: flex;
+        }
+        .client-second{
+            flex-direction: row-reverse;
+        }
+        .client-img,
+        .client-text{
+            width: 50vw;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+    }
 </style>

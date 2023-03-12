@@ -11,7 +11,6 @@
                         לחבר המושלם
                     </p>
                     <NuxtLink to="/store" class="button is-link is-large">להזמנה</NuxtLink>
-
                 </div>
                 <div class="hero-img my-6">
                     <img src="hero-img.png" class="" alt="">
@@ -32,9 +31,20 @@
 <style>
     .hero-body{
         gap: 5rem;
-    }
+        }
     .subtitle{
         white-space: pre-line;
     }
+    @media screen and (min-width: 1024px) {
+        .hero{
+            padding: 0 10rem!important;
+        }
+        .hero-body{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
 </style>
 
